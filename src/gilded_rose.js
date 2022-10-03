@@ -51,9 +51,11 @@ class Shop {
           }
         }
       }
+      //decrease sellIn date if it is not Sulfuras
       if (this.items[i].name != "Sulfuras, Hand of Ragnaros") {
-        this.items[i].sellIn = this.items[i].sellIn - 1;
+        this.items[i].sellIn -= 1;
       }
+      //if the sellIn date has passed
       if (this.items[i].sellIn < 0) {
         if (this.items[i].name != "Aged Brie") {
           if (
